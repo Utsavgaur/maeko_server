@@ -1,0 +1,13 @@
+Step 3: Building the Command
+
+Let’s try constructing the commands step-by-step.
+
+    Stage changes:
+        Git command: git add .
+        Gita command: gita super maeko_server add .
+    Commit changes:
+        Git command: git commit -m "Update code"
+        Gita command: gita super maeko_server commit -m "Update code"
+    Push changes:
+        Git command: git push
+        Gita command: gita super maeko_server push
