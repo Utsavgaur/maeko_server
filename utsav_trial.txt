@@ -1,1 +1,1 @@
-Hi my first repo pull by gita and git from maeko server.
+Hi my first repo pull by gita and git from maeko server. Again I add one line for test "gita shell maeko_server "git add . && git commit -m 'Update files' && git push" command
