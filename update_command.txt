@@ -1,0 +1,65 @@
+Step 2: Creating the cmds.json File
+
+Your goal is to create a custom sub-command in /root/.config/gita/cmds.json to stage, commit, and push changes in the maeko_server repository, as shown in the example:
+json
+{
+  "update": {
+    "cmd": "add . && commit -m 'Update code' && push",
+    "help": "Stage, commit, and push changes",
+    "shell": true
+  }
+}
+
+This will allow you to run:
+bash
+gita update maeko_server
+
+Since you’re already in /root/.config/gita/, you can create the cmds.json file directly.
+Question 2:
+
+What command would you use to create and edit the cmds.json file in /root/.config/gita/? For example, would you use nano, vim, or another editor, and how would you ensure the JSON content is correctly formatted?
+
+Let’s create the file using nano (a user-friendly editor):
+bash
+nano cmds.json
+
+Copy and paste the following content:
+json
+{
+  "update": {
+    "cmd": "add . && commit -m 'Update code' && push",
+    "help": "Stage, commit, and push changes",
+    "shell": true
+  }
+}
+
+Save and exit:
+
+    Press Ctrl+O, then Enter to save.
+    Press Ctrl+X to exit.
+
+To verify the file was created, run:
+bash
+ls
+cat cmds.json
+
+The ls command should show:
+text
+cmds.json  repos.csv
+
+The cat cmds.json command should display the JSON content you added.
+Question 3:
+
+Why is the "shell": true field necessary in the cmds.json entry for the update sub-command? Hint: Review the “customization” section of the gita project description.
+Step 3: Verifying the Custom Sub-Command
+
+After creating cmds.json, you need to confirm that gita recognizes the update sub-command.
+Question 4:
+
+How can you check if the update sub-command is available in gita? What command would you run, and what should you look for in the output?
+
+Run:
+bash
+gita -h
+
+This displays all available gita sub-commands, including custom ones defined in cmds.json. Look for update in the output, along with its help text: “Stage, commit, and push changes.”
